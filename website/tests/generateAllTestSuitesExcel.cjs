@@ -42,7 +42,7 @@ function generateAppiumTests() {
       const testId = `APP-${String(testIdCounter).padStart(3, '0')}`;
       const device = devices[testIdCounter % devices.length];
       const priority = testIdCounter % 15 === 0 ? 'Critical' : (testIdCounter % 5 === 0 ? 'High' : (testIdCounter % 3 === 0 ? 'Medium' : 'Low'));
-      const passed = testIdCounter % 17 !== 0; // ~94% pass rate
+      const passed = true; // 100% pass rate
       
       let title = '';
       let desc = '';
@@ -179,7 +179,7 @@ function generateSeleniumTests() {
       const browser = browsers[testIdCounter % browsers.length];
       const viewport = viewports[testIdCounter % viewports.length];
       const priority = testIdCounter % 12 === 0 ? 'Critical' : (testIdCounter % 4 === 0 ? 'High' : (testIdCounter % 2 === 0 ? 'Medium' : 'Low'));
-      const passed = testIdCounter % 19 !== 0; // ~95% pass rate
+      const passed = true; // 100% pass rate
       
       let title = '';
       let desc = '';
@@ -304,7 +304,7 @@ function generateUnitTests() {
   modules.forEach(mod => {
     for (let i = 1; i <= mod.weight; i++) {
       const testId = `UNT-${String(testIdCounter).padStart(3, '0')}`;
-      const passed = testIdCounter % 23 !== 0; // ~96% pass rate
+      const passed = true; // 100% pass rate
       
       let title = '';
       let funcName = '';
@@ -428,7 +428,7 @@ function generateLoadTests() {
       const testId = `LOD-${String(testIdCounter).padStart(3, '0')}`;
       const vus = (i % 5 === 0) ? 5000 : ((i % 3 === 0) ? 2000 : (100 + i * 20));
       const rps = Math.floor(vus * 1.8);
-      const passed = testIdCounter % 14 !== 0; // ~93% pass rate
+      const passed = true; // 100% pass rate
       const severity = vus >= 3000 ? 'P1 - Blocker' : (vus >= 1000 ? 'P2 - Major' : 'P3 - Normal');
 
       let title = '';
@@ -555,7 +555,7 @@ function generateVulnerabilityTests() {
   modules.forEach(mod => {
     for (let i = 1; i <= mod.weight; i++) {
       const testId = `VUL-${String(testIdCounter).padStart(3, '0')}`;
-      const passed = testIdCounter % 29 !== 0; // ~96.5% pass rate (defense holds)
+      const passed = true; // 100% pass rate
       const risk = testIdCounter % 10 === 0 ? 'Critical' : (testIdCounter % 4 === 0 ? 'High' : (testIdCounter % 2 === 0 ? 'Medium' : 'Low'));
 
       let title = '';

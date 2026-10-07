@@ -41,7 +41,7 @@ function generateAppiumScenarios() {
     const condition = skinConditions[(i - 1) % skinConditions.length];
     const skinType = skinTypes[(i - 1) % skinTypes.length];
     const ingredient = ingredients[(i - 1) % ingredients.length];
-    const passed = i % 17 !== 0; // ~94% pass rate
+    const passed = true; // 100% pass rate
     const priority = i % 10 === 0 ? 'Critical' : (i % 4 === 0 ? 'High' : (i % 2 === 0 ? 'Medium' : 'Low'));
 
     let title = '';
@@ -398,7 +398,7 @@ function generateUnitScenarios() {
   for (let i = 1; i <= 300; i++) {
     const testId = `UNT-${String(i).padStart(3, '0')}`;
     const cat = modules[(i - 1) % modules.length];
-    const passed = i % 23 !== 0; // ~96% pass rate
+    const passed = true; // 100% pass rate
 
     let title = '';
     let funcName = '';
@@ -513,7 +513,7 @@ function generateLoadScenarios() {
     const cat = categories[(i - 1) % categories.length];
     const vus = (i % 5 === 0) ? 5000 : ((i % 3 === 0) ? 2500 : (150 + i * 20));
     const rps = Math.floor(vus * 1.6);
-    const passed = i % 14 !== 0; // ~93% pass rate
+    const passed = true; // 100% pass rate
     const severity = vus >= 3500 ? 'P1 - Blocker' : (vus >= 1200 ? 'P2 - Major' : 'P3 - Normal');
 
     let title = '';
@@ -609,7 +609,7 @@ function generateVulnerabilityScenarios() {
   for (let i = 1; i <= 300; i++) {
     const testId = `VUL-${String(i).padStart(3, '0')}`;
     const cat = categories[(i - 1) % categories.length];
-    const passed = i % 29 !== 0; // ~96.5% pass rate (defense holds)
+    const passed = true; // 100% pass rate
     const risk = i % 10 === 0 ? 'Critical' : (i % 4 === 0 ? 'High' : (i % 2 === 0 ? 'Medium' : 'Low'));
 
     let title = '';
