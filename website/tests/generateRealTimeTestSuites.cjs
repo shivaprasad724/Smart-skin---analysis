@@ -798,4 +798,14 @@ async function runGenerator() {
   }
 }
 
-runGenerator().catch(console.error);
+module.exports = {
+  generateAppiumScenarios,
+  generateSeleniumScenarios,
+  generateUnitScenarios,
+  generateLoadScenarios,
+  generateVulnerabilityScenarios
+};
+
+if (require.main === module) {
+  runGenerator().catch(console.error);
+}
