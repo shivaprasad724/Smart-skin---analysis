@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057632805208",
+    "project_id": "smart-skin-analysis",
+    "storage_bucket": "smart-skin-analysis.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057632805208:android:e429bee206a8d35b1c852d",
+        "android_client_info": {
+          "package_name": "com.Siva.smartskin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoLf1VwMhfr38K4Q_q0DeDbBKYRasp8js"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

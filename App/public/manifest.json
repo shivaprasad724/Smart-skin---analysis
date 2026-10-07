@@ -1,0 +1,9 @@
+{
+  "short_name": "Smart Skin",
+  "name": "Smart Skin Analysis",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Fallback / Default (Web Theme) */
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    --primary: 243 75% 59%; /* Electric Indigo */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 226 70% 94%;
+    --secondary-foreground: 244 47% 34%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 50%;
+    --accent: 226 70% 94%;
+    --accent-foreground: 244 47% 34%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 243 75% 59%;
+    --chart-1: 243 75% 59%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 262 60% 55%;
+    --chart-4: 38 92% 55%;
+    --chart-5: 0 72% 55%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 15%;
+    --sidebar-primary: 243 75% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 215 25% 15%;
+    --sidebar-border: 214 20% 90%;
+    --sidebar-ring: 243 75% 59%;
+  }
+
+  /* 🌐 PLATFORM WEB THEME (Electric Indigo) */
+  .platform-web {
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 226 70% 94%;
+    --secondary-foreground: 244 47% 34%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 50%;
+    --accent: 226 70% 94%;
+    --accent-foreground: 244 47% 34%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 243 75% 59%;
+    --radius: 0.75rem;
+  }
+
+  .dark.platform-web, .dark .platform-web {
+    --background: 224 71% 4%; /* Dark Space Obsidian */
+    --foreground: 210 20% 98%;
+    --card: 224 71% 7%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71% 7%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 244 47% 12%;
+    --secondary-foreground: 226 70% 90%;
+    --muted: 224 71% 10%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 244 47% 15%;
+    --accent-foreground: 226 70% 90%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 71% 15%;
+    --input: 224 71% 15%;
+    --ring: 243 75% 59%;
+  }
+
+  /* 📱 PLATFORM APP THEME (Emerald Wellness) */
+  .platform-app {
+    --background: 40 20% 98%; /* Warm sand / cream background */
+    --foreground: 24 10% 10%; /* Warm deep grey/black text */
+    --card: 40 20% 100%;
+    --card-foreground: 24 10% 10%;
+    --popover: 40 20% 100%;
+    --popover-foreground: 24 10% 10%;
+    --primary: 150 84% 37%; /* Emerald Green */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 56% 90%; /* Mint Green secondary */
+    --secondary-foreground: 156 84% 20%;
+    --muted: 40 10% 93%;
+    --muted-foreground: 24 10% 45%;
+    --accent: 45 90% 92%; /* Soft gold accent */
+    --accent-foreground: 45 90% 30%;
+    --destructive: 0 84% 44%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 150 84% 37%;
+    --radius: 1.5rem; /* High organic rounded corners */
+  }
+
+  .dark.platform-app, .dark .platform-app {
+    --background: 160 65% 5%; /* Organic Deep Dark Forest */
+    --foreground: 40 15% 96%;
+    --card: 160 50% 8%;
+    --card-foreground: 40 15% 96%;
+    --popover: 160 50% 8%;
+    --popover-foreground: 40 15% 96%;
+    --primary: 150 84% 37%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 50% 12%;
+    --secondary-foreground: 150 60% 80%;
+    --muted: 160 30% 12%;
+    --muted-foreground: 160 15% 65%;
+    --accent: 45 90% 15%; /* Deep gold tone */
+    --accent-foreground: 45 90% 80%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 160 40% 14%;
+    --input: 160 40% 14%;
+    --ring: 150 84% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+  }
+  input, textarea, [contenteditable="true"] {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+}
+
+/* Premium App UI Utilities */
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Web Gradient (Obsidian & Electric Violet) */
+  .platform-web .bg-mesh-gradient {
+    background-color: hsla(244, 38%, 6%, 1);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(243, 80%, 15%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(262, 80%, 12%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(199, 90%, 12%, 1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(244, 50%, 10%, 1) 0px, transparent 50%);
+  }
+  
+  .platform-web .bg-mesh-gradient-light {
+    background-color: hsla(210, 40%, 98%, 1);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(243, 90%, 95%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(262, 70%, 95%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(199, 80%, 95%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(243, 80%, 96%, 0.8) 0px, transparent 50%);
+  }
+
+  /* App Gradient (Forest Green & Emerald Wellness) */
+  .platform-app .bg-mesh-gradient {
+    background-color: hsla(160, 65%, 5%, 1);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(150, 80%, 12%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(160, 60%, 10%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(45, 60%, 10%, 1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(150, 70%, 8%, 1) 0px, transparent 50%);
+  }
+  
+  .platform-app .bg-mesh-gradient-light {
+    background-color: hsla(40, 20% , 98%, 1);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(150, 60%, 94%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(160, 50%, 93%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(45, 60%, 93%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(150, 50%, 95%, 0.8) 0px, transparent 50%);
+  }
+
+  /* Default mesh gradients mapping to current active platform */
+  .bg-mesh-gradient {
+    background-color: hsla(244, 38%, 6%, 1);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(243, 80%, 15%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(262, 80%, 12%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(199, 90%, 12%, 1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(244, 50%, 10%, 1) 0px, transparent 50%);
+  }
+  .bg-mesh-gradient-light {
+    background-color: hsla(210, 40%, 98%, 1);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(243, 90%, 95%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(262, 70%, 95%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(199, 80%, 95%, 0.8) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(243, 80%, 96%, 0.8) 0px, transparent 50%);
+  }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/40;
+  }
+  .glass-card-dark {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-slate-800/40;
+  }
+}

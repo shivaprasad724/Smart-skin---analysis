@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow authenticated users to read and write their own user document, admin can read/write all
+    match /users/{userId} {
+      allow read, write: if request.auth != null && (request.auth.uid == userId || request.auth.token.email == 'sivasiva18223@gmail.com');
+    }
+    
+    // Allow reading products for everyone, but writing only for the admin
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.email == 'sivasiva18223@gmail.com';
+    }
+    
+    // Allow users to read/write their own skin analysis reports, and admin to read/write all
+    match /SkinAnalysis/{analysisId} {
+      allow read: if request.auth != null && (
+        resource == null || 
+        resource.data.userId == request.auth.uid || 
+        request.auth.token.email == 'sivasiva18223@gmail.com'
+      );
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && (
+        resource.data.userId == request.auth.uid || 
+        request.auth.token.email == 'sivasiva18223@gmail.com'
+      );
+    }
+  }
+}
